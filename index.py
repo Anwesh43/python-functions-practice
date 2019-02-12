@@ -29,7 +29,20 @@ def sumArgs(*args):
 def printSumArgs():
     print("sum of 1,2,3,8 is {0}".format(sumArgs(1,2,3, 8)))
 
-function_dictionary = {"basic":echo, "psn" : printSumNormal, "pc" : printCloure, "psa" : printSumArgs}
+x = 20
+
+def modifyGlobal():
+    global x
+    x = 30
+
+def printModfyGlobal():
+    def printX():
+        print("value of x is {0}".format(x))
+    printX()
+    modifyGlobal()
+    printX()
+
+function_dictionary = {"basic":echo, "psn" : printSumNormal, "pc" : printCloure, "psa" : printSumArgs, "pmg" : printModfyGlobal}
 
 if __name__ == "__main__":
 
