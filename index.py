@@ -20,7 +20,17 @@ def printCloure():
     print(raiseTo(2)(3))
     print(raiseTo(2)(4))
 
-function_dictionary = {"basic":echo, "psn" : printSumNormal, "pc" : printCloure}
+def sumArgs(*args):
+    sum = 0
+    for i in args:
+        sum += i
+    return sum
+
+def printSumArgs():
+    print("sum of 1,2,3,8 is {0}".format(sumArgs(1,2,3, 8)))
+
+function_dictionary = {"basic":echo, "psn" : printSumNormal, "pc" : printCloure, "psa" : printSumArgs}
+
 if __name__ == "__main__":
 
     args = sys.argv
