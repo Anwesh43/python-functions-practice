@@ -42,7 +42,14 @@ def printModfyGlobal():
     modifyGlobal()
     printX()
 
-function_dictionary = {"basic":echo, "psn" : printSumNormal, "pc" : printCloure, "psa" : printSumArgs, "pmg" : printModfyGlobal}
+def useLambdas():
+    add = lambda a, b: a + b
+    sub = lambda a, b: a - b
+    print("addition of 10 and 20 is {0}".format(add(10, 20)))
+    print("subtraction of 20 and 10 is {0}".format(sub(20, 10)))
+
+function_dictionary = {"basic":echo, "psn" : printSumNormal, "pc" : printCloure, "psa" : printSumArgs,
+"pmg" : printModfyGlobal, "ul" : useLambdas}
 
 if __name__ == "__main__":
 
