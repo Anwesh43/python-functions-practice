@@ -48,8 +48,17 @@ def useLambdas():
     print("addition of 10 and 20 is {0}".format(add(10, 20)))
     print("subtraction of 20 and 10 is {0}".format(sub(20, 10)))
 
+def iterDemo():
+    nums = [1, 2, 3, 4, 5] #iterable
+    iter_nums = iter(nums) #iterator
+    print(next(iter_nums))
+    print(next(iter_nums))
+    print(next(iter_nums))
+    print(list(iter_nums))
+
+
 function_dictionary = {"basic":echo, "psn" : printSumNormal, "pc" : printCloure, "psa" : printSumArgs,
-"pmg" : printModfyGlobal, "ul" : useLambdas}
+"pmg" : printModfyGlobal, "ul" : useLambdas, "idemo" : iterDemo}
 
 if __name__ == "__main__":
 
