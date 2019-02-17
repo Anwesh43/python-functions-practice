@@ -1,4 +1,5 @@
 import sys
+import random
 
 # basic functions.
 def echo():
@@ -56,9 +57,21 @@ def iterDemo():
     print(next(iter_nums))
     print(list(iter_nums))
 
+def generateAboveFifty():
+    num = int(random.random() * 100)
+    if num <= 50:
+        raise ValueError("num less than 50")
+    else:
+        return num
 
-function_dictionary = {"basic":echo, "psn" : printSumNormal, "pc" : printCloure, "psa" : printSumArgs,
-"pmg" : printModfyGlobal, "ul" : useLambdas, "idemo" : iterDemo}
+def processIfGreaterThanFifty():
+    try:
+        print("number is {}".format(generateAboveFifty()))
+    except ValueError:
+        print("number is not greater than 50")
+
+function_dictionary = {"basic": echo, "psn" : printSumNormal, "pc" : printCloure, "psa" : printSumArgs,
+"pmg" : printModfyGlobal, "ul" : useLambdas, "idemo" : iterDemo, "re" : processIfGreaterThanFifty}
 
 if __name__ == "__main__":
 
