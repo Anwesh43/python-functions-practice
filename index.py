@@ -70,8 +70,14 @@ def processIfGreaterThanFifty():
     except ValueError:
         print("number is not greater than 50")
 
+def rangeTest():
+    it_n = iter(range(0, 10))
+    print(next(it_n))
+    print(next(it_n))
+    print(next(it_n))
+
 function_dictionary = {"basic": echo, "psn" : printSumNormal, "pc" : printCloure, "psa" : printSumArgs,
-"pmg" : printModfyGlobal, "ul" : useLambdas, "idemo" : iterDemo, "re" : processIfGreaterThanFifty}
+"pmg" : printModfyGlobal, "ul" : useLambdas, "idemo" : iterDemo, "re" : processIfGreaterThanFifty, "rt" : rangeTest}
 
 if __name__ == "__main__":
 
