@@ -76,8 +76,17 @@ def rangeTest():
     print(next(it_n))
     print(next(it_n))
 
+def enumerateTest():
+    names = ['MG', 'PC', 'DP', 'MP']
+    for i, name in enumerate(names):
+        print ("{0}, {1}".format(i, name))
+    enumerate_const = enumerate(names)
+    print(next(enumerate_const))
+    print(next(enumerate_const))
+    print(list(enumerate_const))
+
 function_dictionary = {"basic": echo, "psn" : printSumNormal, "pc" : printCloure, "psa" : printSumArgs,
-"pmg" : printModfyGlobal, "ul" : useLambdas, "idemo" : iterDemo, "re" : processIfGreaterThanFifty, "rt" : rangeTest}
+"pmg" : printModfyGlobal, "ul" : useLambdas, "idemo" : iterDemo, "re" : processIfGreaterThanFifty, "rt" : rangeTest, "et" : enumerateTest}
 
 if __name__ == "__main__":
 
