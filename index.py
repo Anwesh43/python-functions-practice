@@ -85,8 +85,19 @@ def enumerateTest():
     print(next(enumerate_const))
     print(list(enumerate_const))
 
+def evenNosGenerator(n):
+    for i in range(n):
+        if i % 2 == 0:
+            yield i
+
+
+def generateEvenNos():
+    for i in evenNosGenerator(30):
+        print(i)
+
+
 function_dictionary = {"basic": echo, "psn" : printSumNormal, "pc" : printCloure, "psa" : printSumArgs,
-"pmg" : printModfyGlobal, "ul" : useLambdas, "idemo" : iterDemo, "re" : processIfGreaterThanFifty, "rt" : rangeTest, "et" : enumerateTest}
+"pmg" : printModfyGlobal, "ul" : useLambdas, "idemo" : iterDemo, "re" : processIfGreaterThanFifty, "rt" : rangeTest, "et" : enumerateTest, "ges" : generateEvenNos}
 
 if __name__ == "__main__":
 
